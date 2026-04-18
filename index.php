@@ -37,12 +37,18 @@
         ?>
     </nav>
 
-    
-    <h1>
-        <?= $lang=="lv"?$page_name_lv:$page_name_eng ?>
-    </h1>
+    <main>
+        <h1>
+            <?= $lang=="lv"?$page_name_lv:$page_name_eng ?>
+        </h1>
 
     <p><?= $contents ?></p>
+
+
+
+
+    </main>
+    
 
 
     <?php include "./footer.php" ?>

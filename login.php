@@ -10,6 +10,15 @@
         <input type="email" name="email" id="">
         <input type="password" name="password" id="">
         <button type="submit">Ielogoties</button>
-    </form>    
+    </form>  
+    
+    <?php 
+        if(isset($_COOKIE["error"])){
+            echo "
+                <div>{$_COOKIE["error"]}</div>
+            ";
+        }
+    
+    ?>
 </body>
 </html>

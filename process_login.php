@@ -8,10 +8,11 @@
          $_SESSION["user_logged_in"] = true;
          $_SESSION["user"] = $_POST["email"];
          if(isset($_COOKIE["error"])) unset($_COOKIE["error"]);
+         header("location:admin.php");
     }else{
             $_SESSION["user_logged_in"] = false;
             $_SESSION["user"] = "";
-            $_COOKIE["error"] = "Parole nav pareiza!";
+            setcookie("error","Parole nav pareiza!");
             header("location:login.php");
     }
 

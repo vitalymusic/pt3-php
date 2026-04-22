@@ -47,6 +47,14 @@
             <section id="contacts">
                 <h1>Kontakti</h1>
                 <p>Te būs teksts Kontakti</p>
+
+
+                <form action="./submit.php" method="POST">
+                    <input type="text" name="vards" id="">
+                    <textarea name="message" id=""></textarea>
+
+                    <button type="submit">Nosūtīt</button>
+                </form>
             </section>
 
       <?php else: ?>

@@ -1,14 +1,17 @@
 <?php 
+
+    putenv("ADDRESS=Maskavas iela");
+
     // print_r($_GET);
     setcookie("lang","lv");
     setcookie("user","Vitaly");
 
 
-    var_dump($_COOKIE);
+    // var_dump($_COOKIE);
 
     session_start();
 
-    var_dump($_SESSION);
+    // var_dump($_SESSION);
 
 
    require "./settings.php";

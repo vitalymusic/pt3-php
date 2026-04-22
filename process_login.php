@@ -7,7 +7,7 @@
     if($_POST["email"]==$username && $_POST["password"]===$password){
          $_SESSION["user_logged_in"] = true;
          $_SESSION["user"] = $_POST["email"];
-         if(isset($_COOKIE["error"])) unset($_COOKIE["error"]);
+         if(isset($_COOKIE["error"]))  setcookie("error","",time()-1);
          header("location:admin.php");
     }else{
             $_SESSION["user_logged_in"] = false;

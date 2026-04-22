@@ -1,5 +1,5 @@
 <?php
-     echo "Hello world!";
+   //   echo "Hello world!";
 
     $password = "1234567890";
 

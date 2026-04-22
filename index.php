@@ -38,15 +38,29 @@
     </nav>
 
     <main>
-        <h1>
-            <?= $lang=="lv"?$page_name_lv:$page_name_eng ?>
-        </h1>
+       <?php if(isset($_GET["page"]) && $_GET["page"]=="about_us"):?>
+            <section id="about">
+                <h1>Par mums</h1>
+                <p>Te būs teksts par mums</p>
+            </section>
+      <?php elseif(isset($_GET["page"]) && $_GET["page"]=="contacts"): ?>  
+            <section id="contacts">
+                <h1>Kontakti</h1>
+                <p>Te būs teksts Kontakti</p>
+            </section>
 
-    <p><?= $contents ?></p>
-
-
-
-
+      <?php else: ?>
+            <section id="home">
+                <h1>Galvenā lapa</h1>
+                <p>Te būs teksts Galvenā lapa</p>
+            </section>
+        
+      <?php endif ?>  
+    
+    
+    
+    
+    
     </main>
     
 

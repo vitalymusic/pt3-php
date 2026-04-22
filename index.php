@@ -52,7 +52,7 @@
                 <form action="./submit.php" method="POST" enctype="multipart/form-data">
                     <input type="text" name="vards" id="">
                     <textarea name="message" id=""></textarea>
-                    <input type="file" name="file" id="" accept="image/*">
+                    <input type="file" name="file[]" id="" accept="image/*" multiple>
                     <button type="submit">Nosūtīt</button>
                 </form>
             </section>

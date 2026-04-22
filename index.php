@@ -1,7 +1,14 @@
 <?php 
     // print_r($_GET);
+    setcookie("lang","lv");
+    setcookie("user","Vitaly");
 
 
+    var_dump($_COOKIE);
+
+    session_start();
+
+    var_dump($_SESSION);
 
 
    require "./settings.php";

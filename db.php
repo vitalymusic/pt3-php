@@ -54,4 +54,25 @@ function get_nav(){
     
 
 }
+
+
+function get_users(){
+
+    global $db;
+    $sql = "SELECT id,email,name,surname,phone from users;";
+    $result = $db->query($sql);
+    $data = [];
+    if($result->num_rows>0){
+         while($row = $result->fetch_assoc()){
+            $data[] = $row; 
+            // array_push($data,$row);   
+         }
+        return $data;
+    }else{
+        $data["error"] = "Lietotāji nav pievienoti";
+        return $data;
+    }
+
+
+}
 ?>

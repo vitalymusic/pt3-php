@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    var_dump($_ENV);
+    require "db.php";
 
 ?>
 
@@ -10,15 +10,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
 </head>
-<?php if($_SESSION["user_logged_in"]):?>
+<?php if(isset($_SESSION["user_logged_in"])):?>
 <body>
-    <h1>Administrēšanas lapa</h1>
-    <h2>Sveicināti, <?=$_SESSION["user"]?></h2>
+    <nav>
+        <h1>Administrēšanas lapa</h1>
+        <h2>Sveicināti, <?=$_SESSION["user"]?></h2>
+    </nav>
+    <div class="container">
+    <h3>Lietotāji</h3>
+    <table>
+            <tr>
+                <td>Epasts</td>
+                <td>Vārds</td>
+                <td>Uzvārds</td>
+                <td>Tālrunis</td>
+            </tr>
+        <?php foreach(get_users() as $user):?>
+            <tr>
+                <td><?=$user["email"]?></td>
+                <td><?=$user["name"]?></td>
+                <td><?=$user["surname"]?></td>
+                <td><?=$user["phone"]?></td>
+            </tr>
+        <?php endforeach; ?>    
+    </table>
+    
+</div>
 </body>
 <?php else: ?>
     <body>
-    <div>
+    <div class="container">
         Piekļuve liegta!
     </div>
     <p>Doties uz <a href="login.php">autorizāciju</a> </p>

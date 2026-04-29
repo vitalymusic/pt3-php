@@ -7,11 +7,11 @@
             ],
             [
                 "title"=>"Par mums",
-                "url"=>"./index.php?page=about_us",
+                "url"=>"./index.php?page=Par mums",
             ],
             [
                 "title"=>"Kontakti",
-                "url"=>"./index.php?page=contacts",
+                "url"=>"./index.php?page=Kontakti",
             ],
     
  ];

@@ -1,4 +1,6 @@
 <?php 
+
+    
     session_start();
 
     $username = "user1@inbox.lv";

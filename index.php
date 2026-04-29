@@ -45,27 +45,38 @@ if(isset($_GET["page"])){
 
     <?php include "./header.php" ?>
    
-    <nav>
-        <?php 
-            showNav();          
-        ?>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong><a href="#">Acme Corp</a></strong></li>
+        </ul>
+        <ul>
+            <?php 
+                showNav();          
+            ?>
+        </ul>
+    </nav>
+    <nav  class="container-fluid">
+        
     </nav>
 
     <main>
-        <h1><?=$data["page_name"]?></h1>
-        <section id="content">
-            <?=$data["page_content"]?>  
-        </section>
+        <div class="container">
+            <h1><?=$data["page_name"]?></h1>
+            <section id="content">
+                <?=$data["page_content"]?>  
+            </section>
         
     
 
-
-        <form action="./submit.php" method="POST" enctype="multipart/form-data">
+   
+        <form action="./submit.php" method="POST" enctype="multipart/form-data" class="form">
                     <input type="text" name="vards" id="">
                     <textarea name="message" id=""></textarea>
                     <input type="file" name="file[]" id="" accept="image/*" multiple>
                     <button type="submit">Nosūtīt</button>
         </form>
+    </div>
+        
     
     </main>
     

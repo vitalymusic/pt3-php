@@ -20,6 +20,15 @@ function get_page($page_name){
     if($result->num_rows>0){
         $data = $result->fetch_assoc();
          return $data;
+    }else{
+         $data["page_name"] = "Neeksistējošā lapa";
+         $data["page_content"] = 
+         "
+            <div class=\"danger\">
+                <h3>Lapa nav atrasta</h3>
+            </div>
+         ";
+         return $data;
     }
 
 }

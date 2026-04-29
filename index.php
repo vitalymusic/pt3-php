@@ -52,11 +52,9 @@ if(isset($_GET["page"])){
     </nav>
 
     <main>
+        <h1><?=$data["page_name"]?></h1>
         <section id="content">
-            <h1></h1>
-            <p></p>  
-            
-            <?php var_dump($data)?>
+            <?=$data["page_content"]?>  
         </section>
         
     

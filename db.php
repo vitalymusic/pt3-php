@@ -33,6 +33,25 @@ function get_page($page_name){
 
 }
 
- get_page("Galvenā");
 
+function get_nav(){
+    global $db;
+
+    $sql = "SELECT id,page_name from pages;";
+
+    $result = $db->query($sql);
+    $data = [];
+    if($result->num_rows>0){
+         while($row = $result->fetch_assoc()){
+            // $data[] = $row; 
+            array_push($data,$row);   
+         }
+        return $data;
+    }else{
+        $data["error"] = "Sadaļas nav izveidotas";
+        return $data;
+    }
+    
+
+}
 ?>

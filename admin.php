@@ -41,9 +41,24 @@
     </table>
     
 </div>
+
+<dialog open>
+    <div class="container ">
+        <h3>Lietotāja pievienošana</h3>
+    
+            <form action="">
+                <input type="text" name="name" id="" placeholder="Vārds">
+                <input type="text" name="surname" id="" placeholder="Uzvārds">
+                <input type="email" name="email" id="" placeholder="Epasts">
+                <input type="text" name="phone" id="" placeholder="Tālrunis">
+                <input type="submit" value="Pievienot">
+            </form>
+    </div>
+</dialog >   
 </body>
+
 <?php else: ?>
-    <body>
+<body>
     <div class="container">
         Piekļuve liegta!
     </div>
@@ -52,4 +67,6 @@
 
 </body>
 <?php endif ?>
+
+
 </html>

@@ -105,4 +105,53 @@ function addUser($data){
 }
 
 
+ function loadUserById($data){
+         global $db; 
+         $user_id = $db->real_escape_string($data["user_id"]);
+
+
+         $sql = "SELECT * from users WHERE users.id='{$user_id}'";
+
+         try{
+            $result = $db->query($sql);
+            return $result->fetch_assoc();
+
+        }catch(Error){
+            echo "Kļūda ". Error;
+            return false;
+        }       
+
+
+ };
+
+
+ function updateUser($data){
+     global $db; 
+
+       $name = $db->real_escape_string($data["name"]);
+       $surname = $db->real_escape_string($data["surname"]);
+       $email = $db->real_escape_string($data["email"]);
+       $phone = $db->real_escape_string($data["phone"]);
+       $id = $db->real_escape_string($data["id"]);
+
+       $sql = "UPDATE `users` SET 
+                    `email`='{$email}',
+                    `name`='{$name}',
+                    `surname`='{$surname}',
+                    `phone`='{$phone}'
+                WHERE id='{$id}'"; 
+               
+        try{
+            $result = $db->query($sql);
+            return true;
+
+        }catch(Error){
+            echo "Kļūda ". Error;
+            return false;
+        }       
+
+
+ }
+
+
 ?>

@@ -71,13 +71,12 @@
         <button class="outline dialg1CloseBtn">&#10060;</button>
         <h3>Lietotāja rediģēšana</h3>
     
-            <form action="admin_core.php?action=updateUser" method="POST">
+            <form action="admin_core.php?action=updateUser" method="POST" >
                 <input type="text" name="name" id="" placeholder="Vārds">
                 <input type="hidden" name="id" id="" value="">
                 <input type="text" name="surname" id="" placeholder="Uzvārds">
                 <input type="email" name="email" id="" placeholder="Epasts">
                 <input type="text" name="phone" id="" placeholder="Tālrunis">
-                <input type="password" name="password" id="" placeholder="Izdomā paroli">
                 <input type="submit" value="Saglabāt izmaiņas">
             </form>
     </div>

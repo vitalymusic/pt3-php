@@ -33,6 +33,7 @@
                 <td>Vārds</td>
                 <td>Uzvārds</td>
                 <td>Tālrunis</td>
+                <td>Darbības</td>
             </tr>
         <?php foreach(get_users() as $user):?>
             <tr>
@@ -40,6 +41,7 @@
                 <td><?=$user["name"]?></td>
                 <td><?=$user["surname"]?></td>
                 <td><?=$user["phone"]?></td>
+                <td><button class="userEditBtn" data-user_id="<?=$user["id"]?>">Rediģēt</button></td>
             </tr>
         <?php endforeach; ?>    
     </table>
@@ -61,7 +63,26 @@
                 <input type="submit" value="Pievienot">
             </form>
     </div>
-</dialog >   
+</dialog > 
+
+
+<dialog id="dialog2">
+    <div class="container ">
+        <button class="outline dialg1CloseBtn">&#10060;</button>
+        <h3>Lietotāja rediģēšana</h3>
+    
+            <form action="admin_core.php?action=updateUser" method="POST">
+                <input type="text" name="name" id="" placeholder="Vārds">
+                <input type="hidden" name="id" id="" value="">
+                <input type="text" name="surname" id="" placeholder="Uzvārds">
+                <input type="email" name="email" id="" placeholder="Epasts">
+                <input type="text" name="phone" id="" placeholder="Tālrunis">
+                <input type="password" name="password" id="" placeholder="Izdomā paroli">
+                <input type="submit" value="Saglabāt izmaiņas">
+            </form>
+    </div>
+</dialog > 
+
 </body>
 
 <?php else: ?>

@@ -1,6 +1,6 @@
 <?php
     require "db.php";
-    
+
        if($_GET["action"]=="addUser"){
             var_dump($_POST);
             if(addUser($_POST)){
@@ -11,7 +11,7 @@
        } 
 
        if($_GET["action"]=="loadUser"){
-            var_dump($_POST);
+            var_dump($_GET);
 
 
        } 

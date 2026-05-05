@@ -1,6 +1,8 @@
 let  openDialog1Btn = document.querySelector('.openDialog1Btn')
 let  dialg1CloseBtn = document.querySelector('.dialg1CloseBtn')
+let  dialg2CloseBtn = document.querySelector('.dialg2CloseBtn')
 let  dialog1 = document.querySelector('#dialog1')
+let  dialog2 = document.querySelector('#dialog2')
 
 
 openDialog1Btn.onclick = ()=>{
@@ -8,6 +10,12 @@ openDialog1Btn.onclick = ()=>{
 }
 dialg1CloseBtn.onclick = ()=>{
     dialog1.close()
+}
+dialg1CloseBtn.onclick = ()=>{
+    dialog1.close()
+}
+dialg2CloseBtn.onclick = ()=>{
+    dialog2.close()
 }
 
 
@@ -25,7 +33,7 @@ for (editBtn of editUserBtns ){
                 form[2].value=data.surname;
                 form[3].value=data.email;
                 form[4].value=data.phone;
-                document.querySelector('#dialog2').show();
+               dialog2.show();
             })
     }
 }

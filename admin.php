@@ -68,7 +68,7 @@
 
 <dialog id="dialog2">
     <div class="container ">
-        <button class="outline dialg1CloseBtn">&#10060;</button>
+        <button class="outline dialg2CloseBtn">&#10060;</button>
         <h3>Lietotāja rediģēšana</h3>
     
             <form action="admin_core.php?action=updateUser" method="POST" >

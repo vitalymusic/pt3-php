@@ -84,9 +84,10 @@ function addUser($data){
        $surname = $db->real_escape_string($data["surname"]);
        $email = $db->real_escape_string($data["email"]);
        $phone = $db->real_escape_string($data["phone"]);
+       $password = $db->real_escape_string($data["password"]);
 
-       $sql = "INSERT INTO `users` (`name`, `surname`, `email`,  `phone`) 
-               VALUES ('{$name}','{$surname}','{$email}','{$phone}')"; 
+       $sql = "INSERT INTO `users` (`name`, `surname`, `email`,  `phone`,`password`) 
+               VALUES ('{$name}','{$surname}','{$email}','{$phone}',md5('{$password}'))"; 
                
         try{
             $result = $db->query($sql);

@@ -57,6 +57,7 @@
                 <input type="text" name="surname" id="" placeholder="Uzvārds">
                 <input type="email" name="email" id="" placeholder="Epasts">
                 <input type="text" name="phone" id="" placeholder="Tālrunis">
+                <input type="password" name="password" id="" placeholder="Izdomā paroli">
                 <input type="submit" value="Pievienot">
             </form>
     </div>

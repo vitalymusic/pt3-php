@@ -14,6 +14,7 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
     >
+    <script src="./admin.js" defer></script>
 </head>
 <?php if(isset($_SESSION["user_logged_in"])):?>
 <body>
@@ -23,6 +24,9 @@
     </nav>
     <div class="container">
     <h3>Lietotāji</h3>
+    <div class="buttons">
+            <button class="openDialog1Btn">+ Pievienot jaunu lietotāju</button>
+    </div>
     <table>
             <tr>
                 <td>Epasts</td>
@@ -42,11 +46,13 @@
     
 </div>
 
-<dialog open>
+<dialog id="dialog1">
+    
     <div class="container ">
+        <button class="outline dialg1CloseBtn">&#10060;</button>
         <h3>Lietotāja pievienošana</h3>
     
-            <form action="">
+            <form action="admin_core.php?action=addUser" method="POST">
                 <input type="text" name="name" id="" placeholder="Vārds">
                 <input type="text" name="surname" id="" placeholder="Uzvārds">
                 <input type="email" name="email" id="" placeholder="Epasts">

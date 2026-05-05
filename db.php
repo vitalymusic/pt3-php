@@ -75,4 +75,33 @@ function get_users(){
 
 
 }
+
+
+function addUser($data){
+       global $db;
+
+       $name = $db->real_escape_string($data["name"]);
+       $surname = $db->real_escape_string($data["surname"]);
+       $email = $db->real_escape_string($data["email"]);
+       $phone = $db->real_escape_string($data["phone"]);
+
+       $sql = "INSERT INTO `users` (`name`, `surname`, `email`,  `phone`) 
+               VALUES ('{$name}','{$surname}','{$email}','{$phone}')"; 
+               
+        try{
+            $result = $db->query($sql);
+            return true;
+
+        }catch(Error){
+            echo "Kļūda ". Error;
+            return false;
+        }       
+              
+
+
+
+
+}
+
+
 ?>

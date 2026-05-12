@@ -153,5 +153,24 @@ function addUser($data){
 
  }
 
+ function delUser($data){
+     global $db; 
+
+         $id = $db->real_escape_string($data["user_id"]);
+
+            $sql = "DELETE FROM `users` WHERE users.id='{$id}'";
+
+             try{
+            $result = $db->query($sql);
+            return true;
+
+        }catch(Error){
+            echo "Kļūda ". Error;
+            return false;
+        }   
+
+
+ }
+
 
 ?>

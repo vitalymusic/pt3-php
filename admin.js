@@ -3,6 +3,7 @@ let  dialg1CloseBtn = document.querySelector('.dialg1CloseBtn')
 let  dialg2CloseBtn = document.querySelector('.dialg2CloseBtn')
 let  dialog1 = document.querySelector('#dialog1')
 let  dialog2 = document.querySelector('#dialog2')
+let  delUserBtn = document.querySelector('.delUserBtn')
 
 
 openDialog1Btn.onclick = ()=>{
@@ -33,7 +34,16 @@ for (editBtn of editUserBtns ){
                 form[2].value=data.surname;
                 form[3].value=data.email;
                 form[4].value=data.phone;
+                delUserBtn.dataset.user_id = data.id;
                dialog2.show();
             })
+    }
+}
+
+
+delUserBtn.onclick = (e)=>{
+    if(confirm("Vai tiešām dzēst lietotāju?")){
+        fetch('./admin_core.php?action=delUser&user_id='+ e.target.dataset.user_id)
+            .then(()=>{window.location.reload('admin.php')})
     }
 }

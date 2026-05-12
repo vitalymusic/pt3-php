@@ -32,7 +32,10 @@
        } 
 
          if($_GET["action"]=="delUser"){
-            var_dump($_POST);
+           
+              if(delUser($_GET)){
+                 header("Location:admin.php");
+                };
 
        } 
 

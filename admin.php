@@ -79,6 +79,7 @@
                 <input type="text" name="phone" id="" placeholder="Tālrunis">
                 <input type="submit" value="Saglabāt izmaiņas">
             </form>
+                <button class="outline delUserBtn" data-user_id="">Dzēst lietotāju</button>
     </div>
 </dialog > 
 
